@@ -78,19 +78,48 @@ if (selected == 'Heart Disease Prediction'):
 
     st.write("Please enter the following details to predict Heart Disease:")
 
-    Age = st.text_input('Age of the Person', placeholder="e.g. 30")
-    Sex = st.text_input('Gender of the Person', placeholder="0 for female, 1 for male")
-    Cp = st.text_input('Type of Chest pain', placeholder="e.g. 30")
-    Trestbps = st.text_input('Resting blood pressure', placeholder="e.g. 30")
-    Chol = st.text_input('Serum Cholestoral', placeholder="e.g. 30")
-    Fbs = st.text_input('Fasting Blood Sugar', placeholder="e.g. 30")
-    Restecg = st.text_input('resting electrocardiographic', placeholder="e.g. 30")
-    Thalach = st.text_input('Age of the Person', placeholder="e.g. 30")
-    Exang = st.text_input('exercise induced', placeholder="0 for no, 1 for yes")
-    Oldpeak = st.text_input('ST depression induced by exercise relative to rest', placeholder="e.g. 30")
-    Slope = st.text_input('the slope of the peak exercise ST segment', placeholder="e.g. 30")
-    Ca = st.text_input('Age of the Person', placeholder="e.g. 30")
-    Thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect', placeholder="e.g. 30")
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        Age = st.text_input('Age of the Person', placeholder="e.g. 30")
+
+    with col2:
+        Sex = st.text_input('Gender of the Person', placeholder="0 for female, 1 for male")
+
+    with col3:
+        Cp = st.text_input('Type of Chest pain', placeholder="e.g. 30")
+    
+    with col1:
+        Trestbps = st.text_input('Resting blood pressure', placeholder="e.g. 30")
+    
+    with col2:
+        Chol = st.text_input('Serum Cholestoral', placeholder="e.g. 30")
+
+    with col3:
+        Fbs = st.text_input('Fasting Blood Sugar', placeholder="e.g. 30")
+
+    with col1:
+        Restecg = st.text_input('resting electrocardiographic', placeholder="e.g. 30")
+    
+    with col2:
+        Thalach = st.text_input('Age of the Person', placeholder="e.g. 30")
+
+    with col3:
+        Exang = st.text_input('exercise induced', placeholder="0 for no, 1 for yes")
+
+    with col1:
+        Oldpeak = st.text_input('ST depression induced by exercise relative to rest', placeholder="e.g. 30")
+
+    with col2:
+        Slope = st.text_input('the slope of the peak exercise ST segment', placeholder="e.g. 30")
+
+    with col3:
+        Ca = st.text_input('Age of the Person', placeholder="e.g. 30")
+
+    with col1:
+        Thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect', placeholder="e.g. 30")
+    
+    
 
 
 if (selected == 'Parkinsons Prediction'):
