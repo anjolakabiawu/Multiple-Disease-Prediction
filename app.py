@@ -97,3 +97,28 @@ if (selected == 'Parkinsons Prediction'):
 
     # page title
     st.title('Parkinsons Disease Prediction')
+
+    st.write("Please enter the following details to predict Parkinsons Disease:")
+
+    MDVP_Fo_Hz = st.text_input('Age of the Person', placeholder="e.g. 30")
+    MDVP_Fhi_Hz = st.text_input('Age of the Person', placeholder="e.g. 30")
+    MDVP_Flo_Hz = st.text_input('Age of the Person', placeholder="e.g. 30")
+    MDVP_Jitter_perc = st.text_input('Age of the Person', placeholder="e.g. 30")
+    MDVP_Jitter_Abs = st.text_input('Age of the Person', placeholder="e.g. 30")
+    MDVP_RAP = st.text_input('Age of the Person', placeholder="e.g. 30")
+    MDVP_PPQ = st.text_input('Age of the Person', placeholder="e.g. 30")
+    Jitter_DDP = st.text_input('Age of the Person', placeholder="e.g. 30")
+    MDVP_Shimmer = st.text_input('Age of the Person', placeholder="e.g. 30")
+    MDVP_Shimmer_dB = st.text_input('Age of the Person', placeholder="e.g. 30")
+    Shimmer_APQ3 = st.text_input('Age of the Person', placeholder="e.g. 30")
+    Shimmer_APQ5 = st.text_input('Age of the Person', placeholder="e.g. 30")
+    MDVP_APQ = st.text_input('Age of the Person', placeholder="e.g. 30")
+    Shimmer_DDA = st.text_input('Age of the Person', placeholder="e.g. 30")
+    NHR = st.text_input('Age of the Person', placeholder="e.g. 30")
+    HNR = st.text_input('Age of the Person', placeholder="e.g. 30")
+    RPDE = st.text_input('Age of the Person', placeholder="e.g. 30")
+    DFA = st.text_input('Age of the Person', placeholder="e.g. 30")
+    spread1 = st.text_input('Age of the Person', placeholder="e.g. 30")
+    spread2 = st.text_input('Age of the Person', placeholder="e.g. 30")
+    D2 = st.text_input('Age of the Person', placeholder="e.g. 30")
+    PPE = st.text_input('Age of the Person', placeholder="e.g. 30")
