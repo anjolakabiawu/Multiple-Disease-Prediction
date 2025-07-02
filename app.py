@@ -28,14 +28,32 @@ if (selected == 'Diabetes Prediction'):
     st.write("Please enter the following details to predict Diabetes:")
 
     # getting the input data from the user
-    Pregnancies = st.text_input('Number of Pregnancies', placeholder="e.g. 2")
-    Glucose = st.text_input('Glucose level', placeholder="e.g. 120")
-    BloodPressure = st.text_input('Blood Pressure value', placeholder="e.g. 70")
-    SkinThickness = st.text_input('Skin Thickness value', placeholder="e.g. 20")
-    Insulin = st.text_input('Insulin Level', placeholder="e.g. 80")
-    BMI = st.text_input('BMI value', placeholder="e.g. 25.3")
-    DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function Value', placeholder="e.g. 0.5")
-    Age = st.text_input('Age of the Person', placeholder="e.g. 30")
+    # columns for input fields
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        Pregnancies = st.text_input('Number of Pregnancies', placeholder="e.g. 2")
+
+    with col2:
+        Glucose = st.text_input('Glucose level', placeholder="e.g. 120")
+
+    with col3:
+        BloodPressure = st.text_input('Blood Pressure value', placeholder="e.g. 70")
+
+    with col1:
+        SkinThickness = st.text_input('Skin Thickness value', placeholder="e.g. 20")
+    
+    with col2:
+        Insulin = st.text_input('Insulin Level', placeholder="e.g. 80")
+    
+    with col3:
+        BMI = st.text_input('BMI value', placeholder="e.g. 25.3")
+    
+    with col1:
+        DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function Value', placeholder="e.g. 0.5")
+    
+    with col2:
+        Age = st.text_input('Age of the Person', placeholder="e.g. 30")
 
     # Prediction
     diab_diagnosis = ''
