@@ -38,11 +38,11 @@ if (selected == 'Diabetes Prediction'):
     Age = st.text_input('Age of the Person', placeholder="e.g. 30")
 
     # Prediction
-    diab_diagonsis = ''
+    diab_diagnosis = ''
 
     # Creating a button for prediction
     if st.button('Diabetes Test Result'):
-        input_data = [Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]
+        input_data = [[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]]
         diagnosis = diabetes_model.predict(input_data)
 
         if (diagnosis[0] == 1):
@@ -50,7 +50,7 @@ if (selected == 'Diabetes Prediction'):
         else:
             diab_diagonsis = 'The person is not Diabetic'
     
-    st.success(diab_diagonsis)
+    st.success(diab_diagnosis)
 
 
 if (selected == 'Heart Disease Prediction'):
