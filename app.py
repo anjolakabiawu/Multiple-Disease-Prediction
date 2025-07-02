@@ -211,5 +211,22 @@ if (selected == 'Parkinsons Prediction'):
 
     with col1:
         PPE = st.text_input('Age of the Person', placeholder="e.g. 30")
+
+    # Parkinson prediction
+    parkinson_diagnosis = ''
+
+    # Button for prediction
+    if st.button('Parkinson Disease Result'):
+        input_data = [[MDVP_Fo_Hz, MDVP_Fhi_Hz, MDVP_Flo_Hz, MDVP_Jitter_perc, MDVP_Jitter_Abs,
+                       MDVP_RAP, MDVP_PPQ, Jitter_DDP, MDVP_Shimmer, MDVP_Shimmer_dB, Shimmer_APQ3,
+                       Shimmer_APQ5, MDVP_APQ, Shimmer_DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE]]
+        parkinson_prediction = parkinson_model.predict(input_data)
+
+        if parkinson_prediction[0] == 1:
+            parkinson_diagnosis = 'The person has parkinsons'
+        else:
+            parkinson_diagnosis = 'The person does not have parkinson disease'
+
+    st.success(parkinson_diagnosis)
     
     
