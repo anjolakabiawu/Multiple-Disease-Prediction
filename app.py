@@ -87,39 +87,54 @@ if (selected == 'Heart Disease Prediction'):
         Sex = st.text_input('Gender of the Person', placeholder="0 for female, 1 for male")
 
     with col3:
-        Cp = st.text_input('Type of Chest pain', placeholder="e.g. 30")
+        Cp = st.text_input('Type of Chest pain', placeholder="0-3")
     
     with col1:
-        Trestbps = st.text_input('Resting blood pressure', placeholder="e.g. 30")
+        Trestbps = st.text_input('Resting blood pressure', placeholder="e.g. 120")
     
     with col2:
-        Chol = st.text_input('Serum Cholestoral', placeholder="e.g. 30")
+        Chol = st.text_input('Serum Cholestoral', placeholder="e.g. 200")
 
     with col3:
-        Fbs = st.text_input('Fasting Blood Sugar', placeholder="e.g. 30")
+        Fbs = st.text_input('Fasting Blood Sugar', placeholder="e.g. 1.5")
 
     with col1:
-        Restecg = st.text_input('resting electrocardiographic', placeholder="e.g. 30")
+        Restecg = st.text_input('resting electrocardiographic', placeholder="0-2")
     
     with col2:
-        Thalach = st.text_input('Age of the Person', placeholder="e.g. 30")
+        Thalach = st.text_input('Maximum heart rate achieved', placeholder="e.g. 130")
 
     with col3:
         Exang = st.text_input('exercise induced', placeholder="0 for no, 1 for yes")
 
     with col1:
-        Oldpeak = st.text_input('ST depression induced by exercise relative to rest', placeholder="e.g. 30")
+        Oldpeak = st.text_input('ST depression induced by exercise relative to rest', placeholder="e.g. 1.5")
 
     with col2:
-        Slope = st.text_input('the slope of the peak exercise ST segment', placeholder="e.g. 30")
+        Slope = st.text_input('the slope of the peak exercise ST segment', placeholder="0-2")
 
     with col3:
-        Ca = st.text_input('Age of the Person', placeholder="e.g. 30")
+        Ca = st.text_input('Number of major vessels ', placeholder="0-3")
 
     with col1:
-        Thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect', placeholder="e.g. 30")
+        Thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect', placeholder="0-2")
     
-    
+    # Prediction
+    heart_diagnosis = ''
+
+    # Creating the button for the prediction
+    if st.button('Heart Disease Results'):
+        input_data = [[float(Age), float(Sex), float(Cp), float(Trestbps), float(Chol),
+                float(Fbs), float(Restecg), float(Thalach), float(Exang),
+                float(Oldpeak), float(Slope), float(Ca), float(Thal)]]
+        heart_pred = heart_model.predict(input_data)
+
+        if heart_pred[0] == 1:
+            heart_diagnosis = 'The person has a heart disease'
+        else:
+            heart_diagnosis = 'The person does not have a heart disease'
+
+    st.success(heart_diagnosis)
 
 
 if (selected == 'Parkinsons Prediction'):
