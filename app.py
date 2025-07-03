@@ -217,9 +217,12 @@ if (selected == 'Parkinsons Prediction'):
 
     # Button for prediction
     if st.button('Parkinson Disease Result'):
-        input_data = [[MDVP_Fo_Hz, MDVP_Fhi_Hz, MDVP_Flo_Hz, MDVP_Jitter_perc, MDVP_Jitter_Abs,
-                       MDVP_RAP, MDVP_PPQ, Jitter_DDP, MDVP_Shimmer, MDVP_Shimmer_dB, Shimmer_APQ3,
-                       Shimmer_APQ5, MDVP_APQ, Shimmer_DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE]]
+        input_data = [[
+            float(MDVP_Fo_Hz), float(MDVP_Fhi_Hz), float(MDVP_Flo_Hz), float(MDVP_Jitter_perc), float(MDVP_Jitter_Abs),
+            float(MDVP_RAP), float(MDVP_PPQ), float(Jitter_DDP), float(MDVP_Shimmer), float(MDVP_Shimmer_dB),
+            float(Shimmer_APQ3), float(Shimmer_APQ5), float(MDVP_APQ), float(Shimmer_DDA), float(NHR), float(HNR),
+            float(RPDE), float(DFA), float(spread1), float(spread2), float(D2), float(PPE)
+        ]]
         parkinson_prediction = parkinson_model.predict(input_data)
 
         if (parkinson_prediction[0] == 1):
