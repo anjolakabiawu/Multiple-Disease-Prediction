@@ -147,70 +147,70 @@ if (selected == 'Parkinsons Prediction'):
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        MDVP_Fo_Hz = st.text_input('Age of the Person', placeholder="e.g. 30")
+        MDVP_Fo_Hz = st.text_input('Average vocal fundamental frequency', placeholder="e.g. 130")
 
     with col2:
-        MDVP_Fhi_Hz = st.text_input('Age of the Person', placeholder="e.g. 30")
+        MDVP_Fhi_Hz = st.text_input('Maximum vocal fundamental frequency', placeholder="e.g. 160")
 
     with col3:
-        MDVP_Flo_Hz = st.text_input('Age of the Person', placeholder="e.g. 30")
+        MDVP_Flo_Hz = st.text_input('Minimum vocal fundamental frequency', placeholder="e.g. 100")
 
     with col1:
-        MDVP_Jitter_perc = st.text_input('Age of the Person', placeholder="e.g. 30")
+        MDVP_Jitter_perc = st.text_input('Percent variation in pitch (frequency instability)', placeholder="e.g. 0.005")
 
     with col2:
-        MDVP_Jitter_Abs = st.text_input('Age of the Person', placeholder="e.g. 30")
+        MDVP_Jitter_Abs = st.text_input('Absolute variation in pitch (Hz)', placeholder="e.g. 0.00005")
 
     with col3:
-        MDVP_RAP = st.text_input('Age of the Person', placeholder="e.g. 30")
+        MDVP_RAP = st.text_input('Relative Average Perturbation', placeholder="e.g. 0.002")
 
     with col1:
-        MDVP_PPQ = st.text_input('Age of the Person', placeholder="e.g. 30")
+        MDVP_PPQ = st.text_input('Pitch Period Perturbation Quotient', placeholder="e.g. 0.0025")
 
     with col2:
-        Jitter_DDP = st.text_input('Age of the Person', placeholder="e.g. 30")
+        Jitter_DDP = st.text_input('Average absolute difference of consecutive periods', placeholder="e.g. 0.006")
 
     with col3:
-        MDVP_Shimmer = st.text_input('Age of the Person', placeholder="e.g. 30")
+        MDVP_Shimmer = st.text_input('Variation in amplitude', placeholder="e.g. 0.03")
 
     with col1:
-        MDVP_Shimmer_dB = st.text_input('Age of the Person', placeholder="e.g. 30")
+        MDVP_Shimmer_dB = st.text_input('Shimmer in decibels', placeholder="e.g. 0.25")
 
     with col2:
-        Shimmer_APQ3 = st.text_input('Age of the Person', placeholder="e.g. 30")
+        Shimmer_APQ3 = st.text_input('Amplitude Perturbation Quotient — variation over 3 periods', placeholder="e.g. 0.015")
 
     with col3:
-        Shimmer_APQ5 = st.text_input('Age of the Person', placeholder="e.g. 30")
+        Shimmer_APQ5 = st.text_input('Amplitude Perturbation Quotient — variation over 5 periods.', placeholder="e.g. 0.02")
 
     with col1:
-        MDVP_APQ = st.text_input('Age of the Person', placeholder="e.g. 30")
+        MDVP_APQ = st.text_input('Amplitude Perturbation Quotient — overall amplitude variability', placeholder="e.g. 0.02")
 
     with col2:
-        Shimmer_DDA = st.text_input('Age of the Person', placeholder="e.g. 30")
+        Shimmer_DDA = st.text_input('Average absolute difference of consecutive amplitudes ', placeholder="e.g. 0.045")
 
     with col3:
-        NHR = st.text_input('Age of the Person', placeholder="e.g. 30")
+        NHR = st.text_input('Noise-to-Harmonics Ratio', placeholder="e.g. 0.01")
 
     with col1:
-        HNR = st.text_input('Age of the Person', placeholder="e.g. 30")
+        HNR = st.text_input('Harmonics-to-Noise Ratio', placeholder="e.g. 20")
 
     with col2:
-        RPDE = st.text_input('Age of the Person', placeholder="e.g. 30")
+        RPDE = st.text_input('Recurrence Period Density Entropy', placeholder="e.g. 0.4")
 
     with col3:
-        DFA = st.text_input('Age of the Person', placeholder="e.g. 30")
+        DFA = st.text_input('Detrended Fluctuation Analysis', placeholder="e.g. 0.7")
     
     with col1:
-        spread1 = st.text_input('Age of the Person', placeholder="e.g. 30")
+        spread1 = st.text_input('Nonlinear measure of fundamental frequency variation (Spread 1)', placeholder="e.g. -4")
 
     with col2:
-        spread2 = st.text_input('Age of the Person', placeholder="e.g. 30")
+        spread2 = st.text_input('Nonlinear measure of fundamental frequency variation (Spread 2)', placeholder="e.g. 0.3")
 
     with col3:
-        D2 = st.text_input('Age of the Person', placeholder="e.g. 30")
+        D2 = st.text_input('Correlation dimension — reflects complexity of the voice signal', placeholder="e.g. 2.3")
 
     with col1:
-        PPE = st.text_input('Age of the Person', placeholder="e.g. 30")
+        PPE = st.text_input('Pitch Period Entropy', placeholder="e.g. 0.4")
 
     # Parkinson prediction
     parkinson_diagnosis = ''
