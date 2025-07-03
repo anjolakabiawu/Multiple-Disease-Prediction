@@ -3,7 +3,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 
 # Loading the saved models
-diabetes_model = joblib.load('C:/Users/DELL/Desktop/ML Projects/Multiple Disease App/models/diabetes_model.sav')
+diabetes_model = joblib.load('models/diabetes_model.sav')
 heart_model = joblib.load('models/heart_disease_model.sav')
 parkinson_model = joblib.load('models/parkinson_disease_model.sav')
 
@@ -222,10 +222,10 @@ if (selected == 'Parkinsons Prediction'):
                        Shimmer_APQ5, MDVP_APQ, Shimmer_DDA, NHR, HNR, RPDE, DFA, spread1, spread2, D2, PPE]]
         parkinson_prediction = parkinson_model.predict(input_data)
 
-        if parkinson_prediction[0] == 1:
-            parkinson_diagnosis = 'The person has parkinsons'
+        if (parkinson_prediction[0] == 1):
+            parkinson_diagnosis = 'The person has Parkinson\'s disease'
         else:
-            parkinson_diagnosis = 'The person does not have parkinson disease'
+            parkinson_diagnosis = 'The person does not have Parkinson\'s disease'
 
     st.success(parkinson_diagnosis)
     
